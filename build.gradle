@@ -1,7 +1,7 @@
 plugins {
-    id 'org.springframework.boot' version '2.2.0.M6'
-    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
-    id 'java'
+	id 'org.springframework.boot' version '2.2.0.M6'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
 }
 
 group = 'com.politechnic'
@@ -9,18 +9,20 @@ version = '0.1'
 sourceCompatibility = '11'
 
 repositories {
-    mavenCentral()
-    maven { url 'https://repo.spring.io/milestone' }
+	mavenCentral()
+	maven { url 'https://repo.spring.io/milestone' }
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    runtimeOnly 'org.postgresql:postgresql'
-    testImplementation('org.springframework.boot:spring-boot-starter-test') {
-        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
-    }
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	runtimeOnly 'org.apache.derby:derby'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
 }
 
 test {
-    useJUnitPlatform()
+	useJUnitPlatform()
 }
