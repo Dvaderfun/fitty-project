@@ -1,8 +1,8 @@
 package com.politechnic.fittyproject.repository;
 
-import com.politechnic.fittyproject.entity.UserTest;
+import com.politechnic.fittyproject.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserRepository extends JpaRepository<UserTest, Long> {}
+public interface UserRepository extends JpaRepository<User, String> {}
