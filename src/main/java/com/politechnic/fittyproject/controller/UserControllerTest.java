@@ -1,6 +1,7 @@
-package com.politechnic.fittyproject;
+package com.politechnic.fittyproject.controller;
 
 import com.politechnic.fittyproject.entity.UserTest;
+import com.politechnic.fittyproject.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,7 +14,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1")
-public class UserController {
+public class UserControllerTest {
     @Autowired
     private UserRepository userRepository;
     /**
